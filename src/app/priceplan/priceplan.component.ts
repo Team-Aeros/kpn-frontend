@@ -47,20 +47,5 @@ export class PriceplanComponent implements OnInit {
   constructor() { }
 
  	ngOnInit() {
- 		this.data = [
- 			{
- 				id: 0,
- 				price: 10,
- 				interval: 'monthly',
- 				disc: 0
- 			},
- 			{
- 				id: 1,
- 				price: 40,
- 				interval: 'yearly',
- 				disc: 1
- 			},
- 		];
-
  	}
 }
