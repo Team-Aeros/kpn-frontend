@@ -10,6 +10,9 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { LandingspageComponent } from './landingspage/landingspage.component';
 import { PriceplanComponent } from './priceplan/priceplan.component';
+import { DiscountComponent } from './discount/discount.component';
+import { SubscriptionDetailsComponent } from './subscription-details/subscription-details.component';
+import { PriceplanDetailsComponent } from './priceplan-details/priceplan-details.component';
 
 
 const appRoutes: Routes = [
@@ -29,6 +32,14 @@ const appRoutes: Routes = [
     {
     	path: 'priceplan',
     	component: PriceplanComponent
+    },
+    {
+    	path: 'discount',
+    	component: DiscountComponent
+    },
+    {
+    	path: 'subscription-details/:subscriptionId',
+    	component: SubscriptionDetailsComponent
     }
 ];
 
@@ -40,6 +51,9 @@ const appRoutes: Routes = [
     MenuComponent,
     LandingspageComponent,
     PriceplanComponent,
+    DiscountComponent,
+    SubscriptionDetailsComponent,
+    PriceplanDetailsComponent,
   ],
 
   entryComponents: [

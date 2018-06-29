@@ -1,3 +1,16 @@
-<p>
-  priceplan works!
-</p>
+<div>
+	<div *ngFor="let entry of data">
+		<a>
+			id:			{{entry.id}}
+		</a>
+		<a>
+			price:		{{entry.price}} euros
+		</a>
+		<a>
+			interval:	{{entry.interval}}
+		</a>
+		<a>
+			discount:	{{entry.disc}}
+		</a>
+	</div>
+</div>
