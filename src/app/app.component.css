@@ -1,0 +1,31 @@
+/* Containers */
+#wrapper {
+    margin-left: 120px;
+    color: #263238;
+}
+
+#content {
+    background: #fff;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    color: #8e0000;
+}
+
+h2 {
+    color: #c62828;
+}
+
+h1, h2, h3 {
+    letter-spacing: -1px;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 900px) {
+    #wrapper, #content {
+        width: 100%;
+        margin-left: 0;
+    }
+}

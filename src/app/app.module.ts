@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
 // Services
 import { KpnApiService } from './kpn-api.service';
-import { SubscriptionsComponent } from './subscriptions/subscriptions.component';
+import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './menu/menu.component';
+import { LandingspageComponent } from './landingspage/landingspage.component';
+import { PriceplanComponent } from './priceplan/priceplan.component';
 
 
 const appRoutes: Routes = [
@@ -16,18 +19,34 @@ const appRoutes: Routes = [
         pathMatch: 'full'
     },
     {
+        path: 'home',
+        component: LandingspageComponent
+    },
+    {
     	path: 'subscriptions',
     	component: SubscriptionsComponent
     },
+    {
+    	path: 'priceplan',
+    	component: PriceplanComponent
+    }
 ];
+
 @NgModule({
   declarations: [
-  		AppComponent,
-  		SubscriptionsComponent,
+  	SubscriptionsComponent,
+    AppComponent,
+    HeaderComponent,
+    MenuComponent,
+    LandingspageComponent,
+    PriceplanComponent,
   ],
+
   entryComponents: [
-        SubscriptionsComponent,
-    ],
+  		HeaderComponent,
+     	SubscriptionsComponent,
+   ],
+
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -38,7 +57,9 @@ const appRoutes: Routes = [
             }
         )
   ],
+
   providers: [KpnApiService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
