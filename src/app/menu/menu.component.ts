@@ -20,6 +20,11 @@ export class MenuComponent implements OnInit {
 	            icon: "home",
 	            href: "/home"
 	        },
+            {
+                label: "Products",
+                icon: "home",
+                href: "/products"
+            },
 	        {
 	            label: "Subscriptions",
 	            icon: "folder",
