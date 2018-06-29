@@ -105,12 +105,13 @@ export class KpnApiService {
         ];
     }
 
-    call(url: string, params: object) {
-        let data = {
-            params: params,
-        }
-        return this._http.post(environment.api_url + url, data, {headers: new HttpHeaders({ 'Content-Type': 'application/json' })});
-    }
+    // call(url: string, params: object) {
+    //     let data = {
+    //         params: params,
+    //     }
+    //     return this._http.post(environment.api_url + url, data, {headers: new HttpHeaders({ 'Content-Type': 'application/json' })});
+    // }
+
 
     getAllPricePlanData() {
         return this.pricePlans;
@@ -142,6 +143,14 @@ export class KpnApiService {
                 } 
             }
         }
+    }
+
+    getAllSubscriptions() {
+        return this._http.get(environment.api_url + "/subscriptions");
+    }
+
+    getAllPricePlans() {
+        return this._http.get(environment.api_url + '/priceplans');
     }
 
   // Zijn nog niet per se nodig!

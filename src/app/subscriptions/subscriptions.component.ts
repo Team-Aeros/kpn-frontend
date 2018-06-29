@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router ,ActivatedRoute } from '@angular/router';
+import { KpnApiService } from '../kpn-api.service';
+import * as jsPDF from 'jsPDF';
 
 @Component({
   selector: 'app-subscriptions',
@@ -7,50 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscriptionsComponent implements OnInit {
 
-	data = [
-	{
-		id: 1,
-		customer_id: 2,
-		priceplan: '10gb',
-		startdate: '29-06-2018',
-		enddate: '29-07-2018',
-	},
-	{
-		id: 2,
-		customer_id: 1,
-		priceplan: 'happyhour',
-		startdate: '29-06-2018',
-		enddate: '29-07-2018',
-	},
-	{
-		id: 3,
-		customer_id: 3,
-		priceplan: '2gb',
-		startdate: '29-06-2018',
-		enddate: '29-07-2018',
-	},
-	{
-		id: 4,
-		customer_id: 3,
-		priceplan: '3gb',
-		startdate: '29-06-2018',
-		enddate: '29-07-2018',
-	},
-	{
-		id: 5,
-		customer_id: 1,
-		priceplan: 'happyhour',
-		startdate: '29-06-2018',
-		enddate: '29-07-2018',
-	},
-	];
+	// data = [
+	// {
+	// 	id: 1,
+	// 	customer_id: 2,
+	// 	priceplan: '10gb',
+	// 	startdate: '29-06-2018',
+	// 	enddate: '29-07-2018',
+	// },
+	// ];
+	data;
 
-	constructor() {}
+	constructor(private apiService: KpnApiService) {}
 
 	ngOnInit() {
-		
+		this.apiService.getAllSubscriptions().subscribe(response => this.data = response);
+		console.log(this.data);
 	}
 
+	downloadPDF() {
+  		console.log("downloading");
+  	}
 
   	addNewSubscription(){
   		var customer_id = <HTMLInputElement>document.getElementById('customer_id');
@@ -67,5 +47,4 @@ export class SubscriptionsComponent implements OnInit {
   		this.data.push(newSub);
 
   	}
-
 }

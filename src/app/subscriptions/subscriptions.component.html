@@ -15,9 +15,9 @@
         <tr *ngFor="let item of data" routerLink="/subscription-details/{{item.id}}">
         <th scope="row" >{{item.id}}</th>
           <td>{{item.customer_id}}</td>
-          <td>{{item.priceplan}}</td>
-          <td>{{item.startdate}}</td>
-          <td>{{item.enddate}}</td>
+          <td></td>
+          <td>{{item.created_at}}</td>
+          <td>{{item.ends_at}}</td>
         </tr>
       </tbody>
     </table>
@@ -45,6 +45,8 @@
                     <input type="id" class="form-control" id="enddate" placeholder="End date">
                   </div>
                   <button id="saveButton" type="button" class="btn btn-danger" (click)="addNewSubscription()">Add</button>
+
+                  <button id="saveButton" type="button" class="btn btn-danger" (click)="downloadPDF()">download</button>
                 </form>
               </div>
             </div>
