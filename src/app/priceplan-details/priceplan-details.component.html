@@ -1,27 +1,17 @@
-<div>
-	<div>
-		<p>
-			id: {{data.id}}
-		</p>
-	</div>
-	<div>
-		<p>
-			name: {{data.name}}
-		</p>
-	</div>
-	<div>
-		<p>
-			price: {{data.price}}
-		</p>
-	</div>
-	<div>
-		<p>
-			interval: {{data.interval}}
-		</p>
-	</div>
-	<div routerLink="/discount-details/{{ data.discount.id }}">
-		<p>
-			discount: {{data.discount.amount}}
-		</p>
+<h2>Price Plan details</h2>
+<hr />
+<div class="col-sm-10">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">	
+                    <h4><label><strong>ID: </strong>{{data.id}}</label></h4>
+					<h4><label><strong>Plan name: </strong>{{data.name}}</label></h4>
+					<h4><label><strong>Price: </strong>{{data.price}},- €</label></h4>
+					<h4><label><strong>Interval: </strong>{{data.interval}}</label></h4>
+					<h4><label><strong>Discount: </strong>{{data.discount.amount}} %</label></h4>
+                </div>
+			</div>
+		</div>
 	</div>
 </div>

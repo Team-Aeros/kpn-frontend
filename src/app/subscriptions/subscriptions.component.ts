@@ -7,7 +7,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscriptionsComponent implements OnInit {
 
-	data;
+	data = [
+	{
+		id: 1,
+		customer_id: 2,
+		priceplan: '10gb',
+		startdate: '29-06-2018',
+		enddate: '29-07-2018',
+	},
+	{
+		id: 2,
+		customer_id: 1,
+		priceplan: 'happyhour',
+		startdate: '29-06-2018',
+		enddate: '29-07-2018',
+	},
+	{
+		id: 3,
+		customer_id: 3,
+		priceplan: '2gb',
+		startdate: '29-06-2018',
+		enddate: '29-07-2018',
+	},
+	{
+		id: 4,
+		customer_id: 3,
+		priceplan: '3gb',
+		startdate: '29-06-2018',
+		enddate: '29-07-2018',
+	},
+	{
+		id: 5,
+		customer_id: 1,
+		priceplan: 'happyhour',
+		startdate: '29-06-2018',
+		enddate: '29-07-2018',
+	},
+	];
+
 	constructor() {}
 
 	ngOnInit() {

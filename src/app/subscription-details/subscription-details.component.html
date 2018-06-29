@@ -1,27 +1,17 @@
-<div>
-	<div>
-		<p>
-			id: {{data.id}}
-		</p>
-	</div>
-	<div>
-		<p>
-			customer_id: {{data.customer_id}}
-		</p>
-	</div>
-	<div routerLink="/priceplan-details/{{ data.priceplan.id }}">
-		<p>
-			(clickable) priceplan: {{data.priceplan.name}}
-		</p>
-	</div>
-	<div>
-		<p>
-			start date: {{data.start_date}}
-		</p>
-	</div>
-	<div>
-		<p>
-			end date: {{data.end_date}}
-		</p>
+<h2>Subscription details</h2>
+<hr />
+<div class="col-sm-10">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group">	
+                    <h4><label><strong>ID: </strong>{{data.id}}</label></h4>
+					<h4><label><strong>Customer ID: </strong>{{data.customer_id}}</label></h4>
+					<h4><label routerLink="/priceplan-details/{{ data.priceplan.id }}"><strong>Price plan: </strong>{{data.priceplan.name}}</label></h4>
+					<h4><label><strong>Start date: </strong>{{data.start_date}}</label></h4>
+					<h4><label><strong>End date: </strong>{{data.end_date}}</label></h4>
+                </div>
+			</div>
+		</div>
 	</div>
 </div>
