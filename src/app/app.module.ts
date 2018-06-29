@@ -10,6 +10,11 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { LandingspageComponent } from './landingspage/landingspage.component';
 import { PriceplanComponent } from './priceplan/priceplan.component';
+import { DiscountComponent } from './discount/discount.component';
+import { SubscriptionDetailsComponent } from './subscription-details/subscription-details.component';
+import { PriceplanDetailsComponent } from './priceplan-details/priceplan-details.component';
+import { DiscountDetailsComponent } from './discount-details/discount-details.component';
+import { DiscountTypeDetailsComponent } from './discount-type-details/discount-type-details.component';
 
 
 const appRoutes: Routes = [
@@ -29,6 +34,26 @@ const appRoutes: Routes = [
     {
     	path: 'priceplan',
     	component: PriceplanComponent
+    },
+    {
+    	path: 'discount',
+    	component: DiscountComponent
+    },
+    {
+    	path: 'subscription-details/:subscriptionId',
+    	component: SubscriptionDetailsComponent
+    },
+    {
+    	path: 'priceplan-details/:priceplanId',
+    	component: PriceplanDetailsComponent
+    },
+    {
+        path: 'discount-details/:discountId',
+        component: DiscountDetailsComponent
+    },
+    {
+        path: 'discount-type-details/:name/:id',
+        component: DiscountTypeDetailsComponent        
     }
 ];
 
@@ -40,6 +65,11 @@ const appRoutes: Routes = [
     MenuComponent,
     LandingspageComponent,
     PriceplanComponent,
+    DiscountComponent,
+    SubscriptionDetailsComponent,
+    PriceplanDetailsComponent,
+    DiscountDetailsComponent,
+    DiscountTypeDetailsComponent,
   ],
 
   entryComponents: [

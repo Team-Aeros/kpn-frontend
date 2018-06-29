@@ -1,0 +1,27 @@
+<div>
+	<div>
+		<p>
+			id: {{data.id}}
+		</p>
+	</div>
+	<div>
+		<p>
+			name: {{data.name}}
+		</p>
+	</div>
+	<div>
+		<p>
+			price: {{data.price}}
+		</p>
+	</div>
+	<div>
+		<p>
+			interval: {{data.interval}}
+		</p>
+	</div>
+	<div routerLink="/discount-details/{{ data.discount.id }}">
+		<p>
+			discount: {{data.discount.amount}}
+		</p>
+	</div>
+</div>
