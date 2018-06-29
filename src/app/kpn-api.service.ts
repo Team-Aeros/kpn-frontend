@@ -7,7 +7,7 @@ import { environment } from '../environments/environment';
 })
 export class KpnApiService {
 
-  constructor() { }
+  constructor(private _http: HttpClient) { }
 
   call(url: string, params: object) {
       let data = {
