@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./priceplan.component.css']
 })
 export class PriceplanComponent implements OnInit {
-
-
 	items = [
 	{
 		id: 1,
@@ -44,13 +42,25 @@ export class PriceplanComponent implements OnInit {
 		price: 10,
 		discount: 10,
 	},
-	]
+	];
 
   constructor() { }
 
-  ngOnInit() {
-  }
+ 	ngOnInit() {
+ 		this.data = [
+ 			{
+ 				id: 0,
+ 				price: 10,
+ 				interval: 'monthly',
+ 				disc: 0
+ 			},
+ 			{
+ 				id: 1,
+ 				price: 40,
+ 				interval: 'yearly',
+ 				disc: 1
+ 			},
+ 		];
 
-
-
+ 	}
 }
