@@ -1,0 +1,16 @@
+/* General header styles */
+#header {
+    background-color: #efefef;
+    background-image: url('../../assets/kpn-headerimg.png');
+    background-repeat: repeat-x;
+    background-size: 100%;
+    background-position: 0% 25%;
+    padding: 20px 50px 20px 50px;
+    height:100px;
+}
+
+
+body {
+    margin: 0;
+    padding:0;
+}
