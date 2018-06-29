@@ -16,24 +16,19 @@ export class MenuComponent implements OnInit {
 
 	items = [
 	        {
-	            label: "Dashboard",
+	            label: "Home",
 	            icon: "home",
 	            href: "/home"
 	        },
 	        {
-	            label: "Browse",
+	            label: "Subscriptions",
 	            icon: "folder",
-	            href: "/home"
+	            href: "/subscriptions"
 	        },
 	        {
-	            label: "My courses",
+	            label: "Price Plan",
 	            icon: "save",
-	            href: "/home"
-	        },
-	        {
-	            label: "Settings",
-	            icon: "wrench",
-	            href: "/home"
+	            href: "/priceplan"
 	        },
 	    ];
 
