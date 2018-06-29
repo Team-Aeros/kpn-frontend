@@ -8,12 +8,20 @@ import { Router ,ActivatedRoute } from '@angular/router';
 })
 export class PriceplanDetailsComponent implements OnInit {
 	data;
-
+	id;
 	constructor(private activatedRoute: ActivatedRoute) { }
 
 	ngOnInit() {
+		this.activatedRoute.params.subscribe(params => this.id = params.priceplanId);
 		this.data = {
-			id: this.activatedRoute.params.value.priceplanId,
+			id: this.id,
+			name: '10 Gb',
+			price: 10,
+			interval: 'monthly',
+			discount: {
+				id: 0,
+				amount: 5,
+			}
 		}
 	}
 

@@ -6,6 +6,11 @@
 	</div>
 	<div>
 		<p>
+			name: {{data.name}}
+		</p>
+	</div>
+	<div>
+		<p>
 			price: {{data.price}}
 		</p>
 	</div>
@@ -14,10 +19,9 @@
 			interval: {{data.interval}}
 		</p>
 	</div>
-	<div>
+	<div routerLink="/discount-details/{{ data.discount.id }}">
 		<p>
-			discount: {{data.disc}}
+			discount: {{data.discount.amount}}
 		</p>
 	</div>
-
 </div>

@@ -16,12 +16,11 @@ export class SubscriptionDetailsComponent implements OnInit {
 				customer_id: 0,
 				priceplan: {
 					id: 0,
-					name: 'happy hour'
+					name: 'A2338'
 				},
 				start_date: '29 june 2018',
 				end_date: '29 june 2019'
 			};
-		console.log(this.activatedRoute);
   }
 
 }
