@@ -149,8 +149,20 @@ export class KpnApiService {
         return this._http.get(environment.api_url + "/subscriptions");
     }
 
+    getSubscription(id: number) {
+        return this._http.get(environment.api_url + '/subscriptions/' + id);
+    }
+
     getAllPricePlans() {
         return this._http.get(environment.api_url + '/priceplans');
+    }
+
+    getPricePlan(id: number) {
+        return this._http.get(environment.api_url + '/pricePlan/' + id);
+    }
+
+    getUser(key: String) {
+        return this._http.get(environment.api_url + '/user/' + key);
     }
 
   // Zijn nog niet per se nodig!

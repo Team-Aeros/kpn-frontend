@@ -11,6 +11,7 @@ import * as jsPDF from 'jsPDF';
 export class PriceplanDetailsComponent implements OnInit {
 	data;
 	id;
+	price;
 	constructor(private activatedRoute: ActivatedRoute, private apiService: KpnApiService) { }
 
 	ngOnInit() {
@@ -21,9 +22,16 @@ export class PriceplanDetailsComponent implements OnInit {
 	}
 
 	downloadPDF(){
-		const doc = new jsPDF();
-		doc.text('fsdsnfdsjkfnkdjn',20,10);
-		doc.save('invoice.pdf');
+		this.apiService.getPricePlan(this.id).subscribe(response => {
+			const doc = new jsPDF('p', 'pt', 'a4');
+			doc.text("CustomerId: 		8010010858", 50, 100);
+			doc.text("Name: 			Leeuwerke", 50,120);
+			doc.text("Price: 			 " + response['price'], 50,140);
+			doc.text("Datum: 			" + response['created_at'], 50, 160);
+			doc.text("5G for tablet",50,200);
+			doc.save('invoice.pdf');
+		});
+		
 	}
 
 

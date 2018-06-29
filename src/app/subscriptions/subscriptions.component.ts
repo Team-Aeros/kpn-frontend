@@ -11,7 +11,7 @@ import * as jsPDF from 'jsPDF';
 export class SubscriptionsComponent implements OnInit {
 
 	// data = [
-	// {
+
 	// 	id: 1,
 	// 	customer_id: 2,
 	// 	priceplan: '10gb',
@@ -24,6 +24,7 @@ export class SubscriptionsComponent implements OnInit {
 	constructor(private apiService: KpnApiService) {}
 
 	ngOnInit() {
+		this.data = [];
 		this.apiService.getAllSubscriptions().subscribe(response => this.data = response);
 		console.log(this.data);
 	}

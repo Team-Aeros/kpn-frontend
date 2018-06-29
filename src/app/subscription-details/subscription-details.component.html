@@ -7,9 +7,8 @@
                 <div class="form-group">	
                     <h4><label><strong>ID: </strong>{{data.id}}</label></h4>
 					<h4><label><strong>Customer ID: </strong>{{data.customer_id}}</label></h4>
-					<h4><label routerLink="/priceplan-details/{{ data.priceplan.id }}"><strong>Price plan: </strong>{{data.priceplan.name}}</label></h4>
-					<h4><label><strong>Start date: </strong>{{data.start_date}}</label></h4>
-					<h4><label><strong>End date: </strong>{{data.end_date}}</label></h4>
+					<h4><label routerLink="/priceplan-details/{{ data.price_plan_id }}"><strong>Priceplan</strong> {{data.price_plan_id}}</label></h4>
+					<h4><label><strong>Start date: </strong>{{data.created_at}}</label></h4>
                 </div>
 			</div>
 		</div>
