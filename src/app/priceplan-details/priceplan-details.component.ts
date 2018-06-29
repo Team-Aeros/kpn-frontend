@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router ,ActivatedRoute } from '@angular/router';
+import { KpnApiService } from '../kpn-api.service';
 
 @Component({
   selector: 'app-priceplan-details',
@@ -9,20 +10,13 @@ import { Router ,ActivatedRoute } from '@angular/router';
 export class PriceplanDetailsComponent implements OnInit {
 	data;
 	id;
-	constructor(private activatedRoute: ActivatedRoute) { }
+	constructor(private activatedRoute: ActivatedRoute, private apiService: KpnApiService) { }
 
 	ngOnInit() {
 		this.activatedRoute.params.subscribe(params => this.id = params.priceplanId);
-		this.data = {
-			id: this.id,
-			name: '10 Gb',
-			price: 10,
-			interval: 'monthly',
-			discount: {
-				id: 0,
-				amount: 5,
-			}
-		}
+		this.data = this.apiService.getPricePlanData(this.id);
+		let discount = this.apiService.getDiscount(this.data.discount);
+		this.data['discountDetails'] = discount;
 	}
 
 }

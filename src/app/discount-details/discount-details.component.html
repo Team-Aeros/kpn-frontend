@@ -6,17 +6,12 @@
 	</div>
 	<div>
 		<p>
-			amountType: {{data.amountType}}
+			amount: {{data.amount}} %
 		</p>
 	</div>
-	<div>
+	<div routerLink="/discount-type-details/{{data.typeName}}/{{data.typeId}}">
 		<p>
-			amount: {{data.amount}}
-		</p>
-	</div>
-	<div routerLink="/discount-type-details/{{data.type.name}}/{{data.type.id}}">
-		<p>
-			type name: {{data.type.name}}
+			type name: {{data.typeName}}
 		</p>
 	</div>
 </div>

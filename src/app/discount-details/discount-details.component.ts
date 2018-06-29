@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router ,ActivatedRoute } from '@angular/router';
+import { KpnApiService } from '../kpn-api.service';
 
 @Component({
   selector: 'app-discount-details',
@@ -6,20 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./discount-details.component.css']
 })
 export class DiscountDetailsComponent implements OnInit {
-
+	discountId;
 	data;
-	constructor() { }
+	constructor(private activatedRoute: ActivatedRoute, private apiService: KpnApiService) { }
 
 	ngOnInit() {
-		this.data = {
-			id: 0,
-			amountType: 'percentage',
-			amount: 5,
-			type: {
-				id: 0,
-				name: 'happy hour'
-			}
-		}
+		this.activatedRoute.params.subscribe(params => this.discountId = params.discountId);
+		this.data = this.apiService.getDiscount(this.discountId);
+
 	}
 
 }
