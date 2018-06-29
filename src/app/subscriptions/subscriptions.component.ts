@@ -51,4 +51,21 @@ export class SubscriptionsComponent implements OnInit {
 		
 	}
 
+
+  	addNewSubscription(){
+  		var customer_id = <HTMLInputElement>document.getElementById('customer_id');
+  		var priceplan = <HTMLInputElement>document.getElementById('priceplan');
+  		var startdate = <HTMLInputElement>document.getElementById('startdate');
+  		var enddate = <HTMLInputElement>document.getElementById('enddate');
+  		var newSub = {
+  			id:6,
+  			customer_id: parseInt(customer_id.value),
+  			priceplan:priceplan.value,
+  			startdate:startdate.value,
+  			enddate:enddate.value,
+  		};
+  		this.data.push(newSub);
+
+  	}
+
 }
