@@ -9,9 +9,9 @@
 			customer_id: {{data.customer_id}}
 		</p>
 	</div>
-	<div>
+	<div routerLink="/priceplan-details/{{ data.priceplan.id }}">
 		<p>
-			priceplan: {{data.priceplan}}
+			(clickable) priceplan: {{data.priceplan.name}}
 		</p>
 	</div>
 	<div>

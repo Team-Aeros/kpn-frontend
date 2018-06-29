@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router ,ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-priceplan-details',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./priceplan-details.component.css']
 })
 export class PriceplanDetailsComponent implements OnInit {
+	data;
 
-  constructor() { }
+	constructor(private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		this.data = {
+			id: this.activatedRoute.params.value.priceplanId,
+		}
+	}
 
 }

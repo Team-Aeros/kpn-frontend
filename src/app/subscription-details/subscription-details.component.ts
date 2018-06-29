@@ -14,7 +14,10 @@ export class SubscriptionDetailsComponent implements OnInit {
   		this.data = {
 				id: 0,
 				customer_id: 0,
-				priceplan: 0,
+				priceplan: {
+					id: 0,
+					name: 'happy hour'
+				},
 				start_date: '29 june 2018',
 				end_date: '29 june 2019'
 			};

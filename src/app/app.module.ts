@@ -40,6 +40,10 @@ const appRoutes: Routes = [
     {
     	path: 'subscription-details/:subscriptionId',
     	component: SubscriptionDetailsComponent
+    },
+    {
+    	path: 'priceplan-details/:priceplanId',
+    	component: PriceplanDetailsComponent
     }
 ];
 
