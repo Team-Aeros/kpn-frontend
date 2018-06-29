@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router ,ActivatedRoute } from '@angular/router';
 import { KpnApiService } from '../kpn-api.service';
+import * as jsPDF from 'jsPDF';
 
 @Component({
   selector: 'app-priceplan-details',
@@ -18,5 +19,12 @@ export class PriceplanDetailsComponent implements OnInit {
 		let discount = this.apiService.getDiscount(this.data.discount);
 		this.data['discountDetails'] = discount;
 	}
+
+	downloadPDF(){
+		const doc = new jsPDF();
+		doc.text('fsdsnfdsjkfnkdjn',20,10);
+		doc.save('invoice.pdf');
+	}
+
 
 }
