@@ -24,5 +24,4 @@ export class SubscriptionDetailsComponent implements OnInit {
 			end_date: '29-06-2019'
 		};
   	}
-
 }
