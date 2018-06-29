@@ -13,7 +13,6 @@ export class KpnApiService {
       let data = {
           params: params,
       }
-
       return this._http.post(environment.api_url + url, data, {headers: new HttpHeaders({ 'Content-Type': 'application/json' })});
   }
 
