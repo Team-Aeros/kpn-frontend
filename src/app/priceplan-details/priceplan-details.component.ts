@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router ,ActivatedRoute } from '@angular/router';
 import { KpnApiService } from '../kpn-api.service';
-import * as jsPDF from 'jsPDF';
+// import * as jsPDF from 'jsPDF';
 
 @Component({
   selector: 'app-priceplan-details',

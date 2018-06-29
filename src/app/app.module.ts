@@ -15,6 +15,7 @@ import { SubscriptionDetailsComponent } from './subscription-details/subscriptio
 import { PriceplanDetailsComponent } from './priceplan-details/priceplan-details.component';
 import { DiscountDetailsComponent } from './discount-details/discount-details.component';
 import { DiscountTypeDetailsComponent } from './discount-type-details/discount-type-details.component';
+import { ProductComponent } from './product/product.component';
 
 
 const appRoutes: Routes = [
@@ -53,8 +54,12 @@ const appRoutes: Routes = [
     },
     {
         path: 'discount-type-details/:name/:id',
-        component: DiscountTypeDetailsComponent        
-    }
+        component: DiscountTypeDetailsComponent
+    },
+    {
+        path: 'products',
+        component: ProductComponent
+    },
 ];
 
 @NgModule({
@@ -70,6 +75,7 @@ const appRoutes: Routes = [
     PriceplanDetailsComponent,
     DiscountDetailsComponent,
     DiscountTypeDetailsComponent,
+    ProductComponent,
   ],
 
   entryComponents: [
